@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>basflix
+	</title>
+	<link rel="stylesheet" href="style.css">
+
+
+
+</head>
+<body>
+<div>
+	<div><a href="#home"><img   id="icon" src="assets/basflixicon.png"></a></div>
+  <div class="topnav" id="myTopnav">
+  <a href="#home" class="active">Home</a>
+  <a href="#genre">genre</a>
+  <a href="#movies">movies</a>
+  <a href="#tv series">Tv series</a>
+ <!--  <a href="tv series">Tv series</a> -->
+  <a href="top imdb"> Top IMDB</a>
+   <input type="text" placeholder="Search..">
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+  <a  class="login" href="#login/register">Login/Register </a>
+
+</div>
+
+
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="assets/nttd.jpg" style=" width:1366px; height: 600px;">
+    <div class="text">James Bond :No Time to Die</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="assets/venom.jpg" style=" width:1366px; height: 600px;">
+    <div class="text">Venom 2 :Let There be Carnage</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="assets/shangchi.jpg" style="width:1366px; height: 600px;">
+    <div class="text">Shangchi:Legends Of The Ten Rings</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<br>
+<br>
+<div class="trends">TRENDING MOVIES</div>
+<center>
+<div class="gridcontainer">
+  <div > 
+ <video  width="300" height="300"  controls  poster="https://images.thedirect.com/media/article_full/shang-chi-poster.jpg" ><source src="assets/EverythingEverything.mp4" type="video/mp4">
+    
+  </video><br>  Shang-Chi and The Legend of The Ten Rings</div>
+  <div> <video  width="300" height="300" poster="https://sportshub.cbsistatic.com/i/2021/09/07/16b39672-7470-4389-9963-3a2a8278003d/venom-let-there-be-carnage-poster-1279326.jpg" controls> <source src="assets/Batman_vs_Teenage_Mutant_Ninja_Turtles_(2019)_WEB-DL_high_(fzmovies.net).mp4" type="video/mp4">
+    
+  </video><br>  Venom: Let There Be Carnage</div>
+
+  <div> <video width="300" height="300" poster="https://www.wikirise.com/wp-content/uploads/2021/10/Movie-No-Time-To-Die.jpg" controls> <source src="assets/JLW.mp4" type="video/mp4">
+  
+  </video><br>  No Time To Die</div>
+<div> <video  width="300" height="300" poster="https://images.thedirect.com/media/article_full/spiderman-no-way-home-andrew-garfield-tom-holland-tobey-maguire-mcumultiverse.jpg" controls> <source src="assets/CaptainAmericaFirstAvenger.mp4" type="video/mp4"> 
+  </video><br>  Spider-Man: No Way Home</div>
+  
+
+  <div> <video  width="300" height="300"  controls  poster="https://sportshub.cbsistatic.com/i/2021/08/09/e53aebb9-9afd-4c5f-8708-9e7527107c24/eternals-poster-1269487.jpg" ><source src="assets/kubo (1).mp4" type="video/mp4">
+    
+  </video><br>  Eternals</div>
+  <div> <video  width="300" height="300" poster="https://static2.srcdn.com/wordpress/wp-content/uploads/2020/08/Dune-House-Atreides-Cover-Cropped.jpg" controls> <source src="assets/life.mp4" type="video/mp4">
+    
+  </video><br>  dune</div>
+  <div> <video width="300" height="300" poster="https://images.wallpapersden.com/image/download/netflix-red-notice-poster-2021_bGtqZWeUmZqaraWkpJRmbmdlrWZlbWU.jpg" controls> <source src="assets/thor.mp4" type="video/mp4">
+  
+   </video><br>red notice </div>
+  <div><video  width="300" height="300" poster="https://geeksofdoom.com/GoD/img/2021/08/Free-Guy-poster.png" controls=""> <source src="assets/malefic.mp4" type="video/mp4"> 
+  </video><br> free guy </div>
+  
+</div>
+</center>
+
+<script>
+  var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</body>
+</html>
+
